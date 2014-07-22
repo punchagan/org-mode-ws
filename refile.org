@@ -1,0 +1,11 @@
+* TODO [1/3] Prepare an outline for talk tomorrow   :emacs:hackerschool:talk:
+  DEADLINE: <2014-07-21 Mon>
+** DONE Outlining
+** TODO Organizer
+** TODO Exporting					     :latex:html:pdf:
+* Actually present the outline
+  DEADLINE: <2014-07-22 Tue>
+  CLOCK: [2014-07-21 Mon 22:09]--[2014-07-21 Mon 22:09] =>  0:00
+  :PROPERTIES:
+  :Effort:   5:00
+  :END:

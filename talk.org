@@ -1,0 +1,96 @@
+#+TITLE: Org-mode outline
+#+AUTHOR: Puneeth Chaganti
+#+STARTUP: hidestars
+
+* Org-mode
+  - ORGanizer-mode
+  - Started by Carsten Dominik in 2003 mostly on the subways
+  - Inspired by outline mode
+** Outliner
+   - Capture, write, edit, restructure notes and information
+   - Writing in plain text helps me focus
+   - Toggle visibility
+     | Action         | Key   |
+     |----------------+-------|
+     | Cycle subtree  | TAB   |
+     | Cycle globally | S-TAB |
+   - Restructuring
+     - Up/Down
+     - Promote/Demote
+     Alt (+ Shift) + Arrow keys
+** Organizer
+   #+INCLUDE: refile.org
+   - Agenda views
+     + Defining agenda files
+     + ~C-c a a~
+     + ~C-c a t~
+   - Capture
+     + Adding capture templates
+** Markup
+   - Emphasis and monospace
+     - *bold*
+     - /italic/
+     - _underline_
+     - +strike through+
+     - =code=
+   - Embedded LaTeX
+
+     $$\alpha + \beta < \gamma$$
+
+   - Hyperlinks
+     - [[Org-mode]]
+     - [[https://github.com][github]]
+   - Directives
+     - #+TITLE:
+     - #+AUTHOR:
+     - #+STARTUP: hidestars
+   - Export to
+     - HTML
+     - LaTeX
+     - Presentations
+     - Blogs...
+
+     ~C-c C-e~
+
+** Spreadsheets
+   | a |  b |
+   |---+----+
+   | 8 | 24 |
+   | 3 | 10 |
+   | 4 |  6 |
+   | 1 |  2 |
+   - Structure editing
+     - M-<up>/<down>
+     - M-S-<up>/<down>
+     - M-<right>/<left>
+     - M-S-<right>/<left>
+     - C-c ^
+   - Calculations
+     - Format specifier
+** Literate programming/Babel
+   - Include the output in exported files
+     - Useful for writing documentation
+   - Supports a whole bunch of languages
+     - C
+     - Haskell
+     - Javascript
+     - Python
+     - R
+     - Shell
+     - You can add other languages!
+
+     #+BEGIN_SRC ditaa :file hello-world.png
+     +--------------+
+     |              |
+     | Hello World! |
+     |              |
+     +--------------+
+    #+END_SRC
+
+#+RESULTS:
+: simple profile: ON
+
+** References
+   - [[http://doc.norang.ca/org-mode.html][Bernt Hansen's configuration]]
+   - [[http://orgmode.org/worg/org-tutorials/index.html][Org mode tutorials]]
+   - [[http://orgmode.org/worg/orgcard.html][Reference card]]
