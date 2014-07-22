@@ -87,8 +87,6 @@
      +--------------+
     #+END_SRC
 
-#+RESULTS:
-: simple profile: ON
 
 ** References
    - [[http://doc.norang.ca/org-mode.html][Bernt Hansen's configuration]]
