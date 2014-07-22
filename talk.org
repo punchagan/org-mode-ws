@@ -53,18 +53,21 @@
      ~C-c C-e~
 
 ** Spreadsheets
-   | a |  b |
-   |---+----+
-   | 8 | 24 |
-   | 3 | 10 |
-   | 4 |  6 |
-   | 1 |  2 |
+   | a |  b |   c | total |
+   |---+----+-----+-------|
+   | 1 |  2 |   3 |     6 |
+   | 3 | 10 |  23 |    36 |
+   | 4 |  6 |   3 |    13 |
+   | 8 | 24 | 233 |   265 |
+   #+TBLFM: $4=vsum($1..$3)
+
+
    - Structure editing
      - M-<up>/<down>
      - M-S-<up>/<down>
      - M-<right>/<left>
      - M-S-<right>/<left>
-     - C-c ^
+     - C-c ^ (sort)
    - Calculations
      - Format specifier
 ** Literate programming/Babel

@@ -36,6 +36,8 @@
    (ditaa . t)
    (sh . t)))
 
+;; follow links
+(setq org-return-follows-link t)
 
 ;; Refile targets
 ; Targets include this file and any file contributing to the agenda -
