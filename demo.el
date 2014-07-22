@@ -1,3 +1,14 @@
+;; Minimal UI
+(tooltip-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+;; Load org-tree-slide for the presentation
+(add-to-list 'load-path "~/.emacs.d/src/org-tree-slide/")
+(require 'org-tree-slide)
+(global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+
+
 (setq demo-dir (file-name-directory (or load-file-name (buffer-file-name))))
 
 (setq org-directory demo-dir)
@@ -14,15 +25,15 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; Set agenda files
-(setq org-agenda-files (expand-file-name 
+(setq org-agenda-files (expand-file-name
 			"agenda-files.org"
 			demo-dir))
 
 ;; Refile targets
 ; Targets include this file and any file contributing to the agenda -
 ; up to 5 levels deep
-(setq org-refile-targets 
-      (quote ((org-agenda-files :maxlevel . 5) 
+(setq org-refile-targets
+      (quote ((org-agenda-files :maxlevel . 5)
               (nil :maxlevel . 5))))
 
 ; Targets start with the file name - allows creating level 1 tasks
@@ -40,7 +51,7 @@
 ;; Capture templates
 (require 'org-capture)
 (global-set-key (kbd "C-M-r") 'org-capture)
-  
+
 (setq org-capture-templates
       '(("t" "task" entry
          (file+headline "refile.org" "Tasks")
@@ -50,11 +61,11 @@
          "+ [[%:link][%:description]]" :immediate-finish t)
         ("w" "org-protocol bookmarks" entry
          (file+headline "refile.org" "Links")
-         "* %:description %^G:\n  %u\n  %:link\n\n  %:initial" 
+         "* %:description %^G:\n  %u\n  %:link\n\n  %:initial"
 	 :immediate-finish t)))
 
 ;; org-protocol
 (require 'org-protocol)
 
 ;; start emacs server for org-protocol
-(server-start)  
+;; (server-start)
